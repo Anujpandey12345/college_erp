@@ -1,0 +1,35 @@
+# Environment variables
+.env
+*.env
+
+# Python binaries and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+
+# Virtual environments
+venv/
+bin/
+lib/
+Include/
+Scripts/
+
+# Django static & media
+staticfiles_build/
+staticfiles/
+media/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Compiled files
+*.pyc
+*.pkl
+*.db

@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 
 import os
+import dj_database_url
 
+from decouple import config
 
 
 
@@ -99,6 +101,12 @@ DATABASES = {
 
 
 
+DATABASES = {
+    'default': dj_database_url.config(default='postgres://USER:PASSWORD@HOST:PORT/DBNAME')
+}
+
+
+
 
 
 
@@ -141,6 +149,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles_build" / "static"
 
 
 # Optional global static folder — include only if the folder exists
